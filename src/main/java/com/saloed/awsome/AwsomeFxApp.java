@@ -14,7 +14,7 @@ public class AwsomeFxApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(
-            Objects.requireNonNull(getClass().getResource("sample.fxml")),
+            Objects.requireNonNull(getClass().getResource("main.fxml")),
             ResourceBundle.getBundle("l10n/awesome"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
