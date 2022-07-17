@@ -1,13 +1,13 @@
 plugins {
     id 'org.springframework.boot' version '2.5.0'
-    id "org.openjfx.javafxplugin" version "0.0.10"
+    id 'org.openjfx.javafxplugin' version "0.0.13"
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
 
 group = 'com.saloed'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '16'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -16,7 +16,7 @@ configurations {
 }
 
 javafx {
-    version = "16"
+    version = "18"
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
@@ -35,19 +35,20 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation group: 'org.openjfx', name: 'javafx-fxml', version: '16'
-    implementation group: 'org.openjfx', name: 'javafx-controls', version: '16'
+
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: '18'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: '18'
+    implementation group: 'org.openjfx', name: 'javafx', version: '18'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.cloud:spring-cloud-starter-aws'
-    implementation 'org.springframework.cloud:spring-cloud-starter-aws-jdbc'
-    implementation 'org.springframework.cloud:spring-cloud-starter-aws-messaging'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-aws'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-aws-jdbc'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-aws-messaging'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    implementation 'org.openjfx:javafx:16'
 }
 
 dependencyManagement {
